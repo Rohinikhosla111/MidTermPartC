@@ -5,14 +5,29 @@
 
 package midtermexam_versiona_extensioncode;
 
+import java.util.*;  
+
 /**
  *
  * @author ROHINI
  */
 public class TestUserprofile {
     public static void main(String[] args) {
-        String userId = "ULTAN029";
-        String genre = "Drama";
+        Scanner sc=new Scanner(System.in); 
+        String userId;
+        String genre;
+
+        System.out.println("Enter the user id :");
+        userId = sc.nextLine();
+
+        System.out.println("Choose a genre from below");
+        System.out.println("* Comedy");
+        System.out.println("* Drama");
+        System.out.println("* Action");
+        System.out.println("* Mystery");
+        System.out.println("Enter your selection below : ");
+        genre = sc.nextLine();
+
         UserProfile userProfile = new UserProfile(userId, genre);
         System.out.println("Created user is : " + userProfile.getUserID() + " with genre : " + userProfile.getGenre());
     }

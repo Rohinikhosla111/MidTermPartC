@@ -28,7 +28,12 @@ public class TestUserprofile {
         System.out.println("Enter your selection below : ");
         genre = sc.nextLine();
 
-        UserProfile userProfile = new UserProfile(userId, genre);
-        System.out.println("Created user is : " + userProfile.getUserID() + " with genre : " + userProfile.getGenre());
+        if(!genre.equals("Comedy") && !genre.equals("Drama") && !genre.equals("Action") && !genre.equals("Mystery")) {
+            System.out.println("Acceptable genre not entered. User cannot be created");
+        }
+        else {
+            UserProfile userProfile = new UserProfile(userId, genre);
+            System.out.println("Created user is : " + userProfile.getUserID() + " with genre : " + userProfile.getGenre());
+        }
     }
 }
